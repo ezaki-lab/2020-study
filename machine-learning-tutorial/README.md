@@ -59,14 +59,14 @@ docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./mnist.py
 
 ### 用語
 
-- Conv2D: 畳み込み層
-- MaxPooling2D: プーリング層
-    - [【入門者向け解説】プーリング処理入門(TensorFlowで説明)](https://qiita.com/FukuharaYohei/items/73cce8f5707a353e3c3a)
-- Dropout: ドロップアウト層
-    - [【Deep Learning with Python】ドロップアウト](https://liaoyuan.hatenablog.jp/entry/2018/02/19/195637)
-- Dense: 通常の結合層
-- Reshape: データの変形（任意次元に）
-- Flatten: データの変形（1 次元に）
+| 用語 | 説明 | 参考 |
+|---|---|---|
+| Conv2D | 畳み込み層 |   |
+| MaxPooling2D | プーリング層 | [【入門者向け解説】プーリング処理入門(TensorFlowで説明)](https://qiita.com/FukuharaYohei/items/73cce8f5707a353e3c3a) |
+| Dropout | ドロップアウト層 | [【Deep Learning with Python】ドロップアウト](https://liaoyuan.hatenablog.jp/entry/2018/02/19/195637) |
+| Dense | 通常の結合層 |   |
+| Reshape | データの変形（任意次元に） |   |
+| Flatten | データの変形（1 次元に） |   |
 
 ## 参考
 
