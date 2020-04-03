@@ -57,6 +57,17 @@ docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./mnist.py
 - [DL4US - Lesson 0](https://github.com/matsuolab-edu/dl4us)
 - [ニューラルネットワークの基礎解説：仕組みや機械学習・ディープラーニングとの関係は](https://www.sbbit.jp/article/cont1/33345)
 
+### 用語
+
+- Conv2D: 畳み込み層
+- MaxPooling2D: プーリング層
+    - [【入門者向け解説】プーリング処理入門(TensorFlowで説明)](https://qiita.com/FukuharaYohei/items/73cce8f5707a353e3c3a)
+- Dropout: ドロップアウト層
+    - [【Deep Learning with Python】ドロップアウト](https://liaoyuan.hatenablog.jp/entry/2018/02/19/195637)
+- Dense: 通常の結合層
+- Reshape: データの変形（任意次元に）
+- Flatten: データの変形（1 次元に）
+
 ## 参考
 
 - [TensorFlow](https://www.tensorflow.org/)
