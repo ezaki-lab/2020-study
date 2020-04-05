@@ -1,6 +1,6 @@
 # Machine Learning Tutorial
 
-　Googleの開発した機械学習ツールのTensorflow・Kerasを使い、簡単な機械学習のモデルを理解する。
+Googleの開発した機械学習ツールのTensorflow・Kerasを使い、簡単な機械学習のモデルを理解する。
 
 ## 実施日
 
