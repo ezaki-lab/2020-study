@@ -66,7 +66,8 @@ PWAで「アプリのように高速かつ信頼性のある動作」をする�
 #### ServiceWorkerは身近に
 
 chromeのデペロッパーツールから以下の赤線を押していくと、聞き覚えのあるURLが
-![](readme_img/f12.png)
+![f12](https://user-images.githubusercontent.com/39362040/78881227-74fff700-7a91-11ea-8665-95637b87622d.PNG)
+
 
 ## 参考
 
