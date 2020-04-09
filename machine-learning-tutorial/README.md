@@ -34,6 +34,7 @@ docker pull tensorflow/tensorflow
 #### 実行
 
 ``` 2020-study/machine-learning-tutorial
+cd Users/ユーザー名/Downloads/study/machine-learning-tutorial
 docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./linear-regression.py
 ```
 
@@ -47,6 +48,7 @@ docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./linear-r
 #### 実行
 
 ``` Run
+cd Users/ユーザー名/Downloads/study/machine-learning-tutorial
 docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./mnist.py
 ```
 
