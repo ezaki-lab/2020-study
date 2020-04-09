@@ -1,6 +1,6 @@
 # Machine Learning Tutorial
 
-　Googleの開発した機械学習ツールのTensorflow・Kerasを使い、簡単な機械学習のモデルを理解する。
+Googleの開発した機械学習ツールのTensorflow・Kerasを使い、簡単な機械学習のモデルを理解する。
 
 ## 実施日
 
@@ -33,7 +33,7 @@ docker pull tensorflow/tensorflow
 
 #### 実行
 
-``` Run
+``` 2020-study/machine-learning-tutorial
 docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./linear-regression.py
 ```
 
@@ -56,6 +56,7 @@ docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./mnist.py
 - [機械学習の超初心者が、みんなが良いと言う記事を読んでまとめてみた - Qiita](https://qiita.com/2ko2ko/items/bae866695dfdd4a4b5b5)
 - [DL4US - Lesson 0](https://github.com/matsuolab-edu/dl4us)
 - [ニューラルネットワークの基礎解説：仕組みや機械学習・ディープラーニングとの関係は](https://www.sbbit.jp/article/cont1/33345)
+- [畳み込みニューラルネットワークとは - Qiita](https://qiita.com/hatt0519/items/ac2ea6f9e1c993816821)
 
 ### 用語
 
