@@ -1,0 +1,18 @@
+webページをネイティブアプリっぽくしよう。
+https://webtan.impress.co.jp/e/2019/08/19/33635
+
+Web App Manifestについて
+https://developer.mozilla.org/ja/docs/Web/Manifest
+manifest用json説明
+https://developers.google.com/web/fundamentals/web-app-manifest/?hl=ja
+json/icon作成
+https://app-manifest.firebaseapp.com/
+
+
+webサイトをキャッシュで保存し、オフラインで見れるようにする
+ServiceWorkerについて
+https://developers.google.com/web/fundamentals/primers/service-workers?hl=ja
+ServiceWorkerとCache APIを使ってオフラインでも動くWebアプリを作る
+https://qiita.com/horo/items/175c8fd7513138308930
+
+2018年にしたとき、記事が少なかったけど、最近調べたらかなり記事が増えてた

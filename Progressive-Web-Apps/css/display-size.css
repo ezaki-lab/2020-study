@@ -1,0 +1,13 @@
+body{
+  background-color: black;
+}
+.main{
+  position:absolute;
+  background-color:black;
+  color: #fff;
+  margin:0 auto;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  right:0px;
+}

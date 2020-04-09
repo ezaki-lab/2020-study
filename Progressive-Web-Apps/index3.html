@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="jp" dir="ltr">
+  <head>
+    <!--文字化け防止--><meta charset="utf-8">
+    <!--ダブルタップでの拡大防止--><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <!--林檎の端末での、fullscreen表示--><meta name="apple-mobile-web-app-capable" content="yes">
+    <!--ブラウザでのfullscreen表示（動いているのか怪しい）--><meta name="mobile-web-app-capable" content="yes">
+    <!--ホームアイコン-->
+    <link rel="icon" href="img/icons/icon-96x96.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="img/icons/icon-96x96.png" sizes="96x96">
+    <!--比率表示画面css--><link rel="stylesheet" type="text/css" href="css/display-size.css">
+    <!--jquery読み込み--><script src="js/jquery-3.4.1.min.js"></script>
+    <!--比率拡大表示計算--><script src="js/display-size.js"></script>
+    <!--林檎 webアプリに表示時にリンクでsafariを開かない様にする機能--><script src="js/apple_not-safari.js"></script>
+    <!--json読み込み--><link rel="manifest" crossorigin="use-credentials" href="manifest.json">
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+        // 登録成功
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function(err) {
+        // 登録失敗 :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+    </script>
+
+    <title>--------</title>
+    <style>
+    #menu{
+      position: fixed;
+      font-size: 42px;
+      top: 5px;
+      left: 5px;
+    }
+    .main{
+      background: url(img/tomato.jpg) center center / cover no-repeat fixed;
+      padding: 0;
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="main" id="main">
+      <div id="menu">
+        <ul>
+          <li>
+            <a href="index.html">1つめ</a>
+          </li>
+          <li>
+            <a href="index2.html">2つめ</a>
+          </li>
+          <li>
+            <a href="index3.html">3つめ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
