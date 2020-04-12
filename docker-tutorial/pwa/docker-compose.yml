@@ -1,0 +1,9 @@
+version: "3"
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - 8888:80
+    privileged: true
+    volumes:
+      - "../../Progressive-Web-Apps/:/usr/share/nginx/html"
