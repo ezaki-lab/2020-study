@@ -22,19 +22,31 @@ cd ~/Downloads/2020-study/docker-tutorial
 
 #### ビルドしてdocker imageを作る
 
+`-t`でイメージ名を指定
+
 ``` build simple calculator
 docker build -t simple-calculator ./simple-calculator
 ```
 
-`-t`でイメージ名を指定
+イメージを確認
+
+```
+docker image ls
+```
 
 #### docker containerを作る
+
+`-p`でポート番号を指定。コンテナ内の80番をlocalhostの4000番に対応させている。
 
 ``` run simple calculator
 docker run -p 4000:80 simple-calculator
 ```
 
-`-p`でポート番号を指定。コンテナ内の80番をlocalhostの4000番に対応させている。
+コンテナを確認
+
+```
+docker container ls
+```
 
 #### POSTリクエスト
 
