@@ -8,24 +8,24 @@
 - [DockerをMacにインストールする - Qiita](https://qiita.com/kurkuru/items/127fa99ef5b2f0288b81)
 - [【備忘録】【Docker奮闘記:1】Docker for Windows インストール - Qiita](https://qiita.com/manamiTakada/items/c1394e5e3358802a9446)
 
-### ディレクトリ移動
-
-``` change directory
-cd ~/Downloads/2020-study/docker-tutorial
-```
-
 ## Simple Calculator
 
 シンプルな計算機API。
 
 ### Simple Calculator を実行
 
+#### ディレクトリ移動
+
+``` change directory
+cd ~/Downloads/2020-study/docker-tutorial/simple-calculator
+```
+
 #### ビルドしてdocker imageを作る
 
 `-t`でイメージ名を指定
 
 ``` build simple calculator
-docker build -t simple-calculator ./simple-calculator
+docker build -t simple-calculator .
 ```
 
 イメージを確認
@@ -92,6 +92,28 @@ docker-compose up -d
 ```
 docker-compose down
 ```
+
+## PWA
+
+`2020-study/Progressive-Web-Apps`のプロジェクトで、ローカルにサーバーを立てる。
+
+（一般的にはプロジェクト内に`docker-compose.yml`を置く）
+
+### 実行
+
+#### ディレクトリ移動
+
+``` change directory
+cd ~/Downloads/2020-study/docker-tutorial/pwa
+```
+
+#### docker-composeを使ってローカルにwebサーバーを立てる
+
+```
+docker-compose up -d
+```
+
+`http://localhost:8888`で確認できれば成功。
 
 ## 基礎学習
 
