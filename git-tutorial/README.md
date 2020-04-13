@@ -67,7 +67,7 @@ git push
 
 これで、リモートリポジトリにも、反映される。
 
-![img](https://github.com/Tsuyoshi16416/GitTutorial/blob/master/img/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-04-12%2017.26.01.png?raw=true)
+![img](https://github.com/ezaki-lab/2020-study/blob/master/git-tutorial/img/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-04-12%2017.26.01.png?raw=true)
 
 ### ローカルリポジトリとリモートリポジトリを編集
 
