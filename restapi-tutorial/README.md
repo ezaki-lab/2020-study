@@ -3,6 +3,10 @@
 # 実行日
 2020/4/17
 
+今回の説明はqiitaにて限定公開しているため、github上で見にくい場合は下記のqiitaの方へ飛んでください
+
+[REST API qiita](https://qiita.com/YutoTakamatsu/private/44869f28a841604e42a5)
+
 # RESTAPIの概要
 
 ## REST APIとは
