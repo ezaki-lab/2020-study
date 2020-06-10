@@ -22,19 +22,19 @@
 システムの設計原則(設計の考え方)の一つです。元々はAPIに限らずウェブ全体に適用するための考え方です。
 このRESTの考え方に従って設計されたAPIを REST API と言います。
 
-##一般的なRESTの特徴
+## 一般的なRESTの特徴
 
-####REST APIの特徴
+#### REST APIの特徴
  * URI(HTTPのパス)が名詞形であること（動詞を含まないこと）
  * リソース（操作対象のもの）の操作（作成/閲覧/変更/削除）をHTTPのメソッドにより指定できること
  * レスポンス形式がjsonもしくはXMLであること
  
-####URLとURIの違い（特に違いはない）
+#### URLとURIの違い（特に違いはない）
 <img src = "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/517357/623f7511-785b-b0cc-5a18-a7bff14c1999.jpeg" width = "500px">
 
 細かいことを言うと「http:」というパーツはURLとして定められているわけではなく、URIとしての識別子（スキーム）なので、技術仕様などではURIと呼ぶことが多いです。
 
-###REST APIの例
+### REST APIの例
 |やりたいこと|URL|HTTPのメソッド|
 |:-----------:|:------------|:------------:|
 |ユーザ一覧確認|https://APIサーバのホスト名/users|GET|
@@ -44,7 +44,7 @@
 
 詳細を説明していく前に、比較するためにRESTではないAPIの例を出します。
 
-###RESTではないAPIの例
+### RESTではないAPIの例
 |やりたいこと|URL|HTTPのメソッド|
 |:-----------:|:------------|:------------:|
 |ユーザ一覧確認|https://APIサーバのホスト名/get_users|GET|
@@ -52,7 +52,7 @@
 |ユーザ変更|https://APIサーバのホスト名/modify_users|GET|
 |ユーザ削除|https://APIサーバのホスト名/delete_users|GET|
 
-###RESTなAPIとそうでないAPI
+### RESTなAPIとそうでないAPI
 ユーザ情報を確認、登録、変更、削除を行う場合のAPIを作成しようと考える。
 
 ![RESTではない.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/517357/c605c848-0b81-9c78-d4b1-12228a6a682c.png)
@@ -75,7 +75,7 @@ RESTな考えで同じシステムを構築した場合はこのようになり�
 
 HTTPの一般的なリクエストメソッドを使用することもRESTなAPIである一つの要因である。
 
-####HTTPの一般的なリクエストメソッドとは
+#### HTTPの一般的なリクエストメソッドとは
 
 HTTPリクエストメソッドとは、Webブラウザからwebサーバに対しての命令（リクエスト）です。
 
@@ -100,38 +100,38 @@ Webブラウザは、Webサーバから情報をもらって画面に出力し�
 |CONNECT|トンネルを開く|データのパケットをサーバまで転送|△|
 |TRACE|ネットワーク経路の調査|Webサーバと接続ができるかの確認|○|
 
-####リクエストメソッド：GET
+#### リクエストメソッド：GET
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/517357/71089675-1e0c-518e-53b4-62d0ef9ba287.jpeg" width="400px">
 
 初めてみるWebサイトを表示する時に<font color="Red">GET</font>が行われています。
 
 
-####リクエストメソッド：POST
+#### リクエストメソッド：POST
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/517357/0455aeaa-f450-4953-2015-1c579dce4abb.jpeg" width="400px">
 
 データをWebサーバに提供します。
 例えば、何かのサイトの会員情報を登録する時、<font color="Red">POST</font>が行われます。
 会員情報を入力して、会員情報を確定するを押した瞬間にPOSTが行われ、Webサーバに会員情報が渡されます。
 
-####リクエストメソッド：PUT
+#### リクエストメソッド：PUT
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/517357/5e7208df-6876-5c45-6718-db810ec93a2e.jpeg" width="400px">
 
 <font color="Red">PUT</font>は、リソースの更新をします。
 例えば、記事を投稿したり、編集して更新したりすると、PUTが行われます。
 
-####リクエストメソッド：DELETE
+#### リクエストメソッド：DELETE
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/517357/171fe37f-50f5-f5b1-e636-baea43f166ed.jpeg" width="400px">
 
 <font color="Red">DELETE</font>は、データを削除する時に使用します。
 
 他のリクエストメソッドに関しては、あまり使うことがないので、気になる人は自分で調べてみてください。
 
-##URI(HTTPのパス）が名詞形であること（動詞を含まないこと）
+## URI(HTTPのパス）が名詞形であること（動詞を含まないこと）
 これは、先程の例で言えばREST APIの場合、URIは /users、 非RESTの場合は /get_users のようになっていました。
 このように URIが名詞形だけであること がREST APIの特徴です。
 一つのURIしかないのに、どうやって作ったり消したりするの？
 
-##リソースの操作をHTTPのメソッドにより指定できること
+## リソースの操作をHTTPのメソッドにより指定できること
 HTTPのメソッドを変えることで作る、消すなどの操作を変えるということができます。
 つまり、同じURLにアクセスした場合でも、HTTPのメソッドが違うと異なる動作をするということです。
 (ちなみにHTTPのメソッドというのは、HTTPのリクエストに含めることができる情報の一つです。)
@@ -149,7 +149,7 @@ curl -X GET https://サーバのAPI/users
 curl -X POST https://サーバのAPI/users
 ```
 のようになります。
-####curlとは
+#### curlとは
 curlとはCLI【コマンドラインインターフェース / Command Line Interface】または、CUI【キャラクタユーザインターフェース / Character User interface】でHTTPリクエストなどを実行するためのコマンドです。
 
 
@@ -167,7 +167,7 @@ curlとはCLI【コマンドラインインターフェース / Command Line Int
 書いてある通りなのですが、サーバからのレスポンスがjsonかXML形式で返ってくることです。
 最近のWebAPIはほとんどjsonになっていると思います。(XMLはあまりみない）
 
-##有名なREST API
+## 有名なREST API
 例えば、TwitterやFaceBookのAPIとして提供されています。
 
 Twitter APIで検索すると以下のようにわかりやすい解説をしてくれるサイトがあります。
@@ -181,16 +181,16 @@ FaceBookについてはGraph APIというものが提供されています。
 さらに、GithubもAPIを出しているので、興味のある人は調べてみてください。
 [Github API](https://developer.github.com/v3/)
 
-#【Python FlaskでREST APIを実装する】
+# 【Python FlaskでREST APIを実装する】
 
-##Flask とは
+## Flask とは
 [Flask](https://a2c.bitbucket.io/flask/)は、Webフレームワークで軽量で機能がそこまで備わっていないということが最大の特徴です。
 Webフレームワークというと、Rubyの[Rails](https://rubyonrails.org)やPythonでは[Django](https://www.djangoproject.com)などが有名ですが、機能が多いためFlaskに比べるとかなり重いというデメリットがあります。
 
 FlaskはPythonのWebアプリケーションフレームワークで、小規模向けの簡単なWebアプリケーションを作るのに適しています。
 WebSiteやWebApplicationを作るための機能を提供し、Webフレームワークを使わない時よりも容易にWebアプリケーションを作ることができるものです。
 
-##Flaskのインストール
+## Flaskのインストール
 pythonのインストールに関しては省きます。
 
 ```terminal:terminal
@@ -214,7 +214,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 と表示されれば、Flaskのインストールが完了しています。
 
-#まずは、Hello World!を返してみる
+# まずは、Hello World!を返してみる
 
 
 ```python:hello.py
@@ -249,6 +249,7 @@ $ python3 hello.py
 Flaskに備わっているビルドインサーバを利用して起動しているので、開発環境で試すだけにしてくださいという警告が出ています。
 
 それでは、　ブラウザで``http://127.0.0.1:5000/``にアクセスします。
+
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/517357/15df7344-486d-2bff-aab9-e3d8fadd16ab.png" width="400px">
 
 上記の通り、``Hello, World!``を返すことができました。
@@ -311,7 +312,7 @@ This is Home page.
 
 このようにルーティングから処理値の返却程度であれば簡単に実装することが可能です。
 
-#URLを一部引数として受け取る
+# URLを一部引数として受け取る
 アクセス時にURLの一部を変数としてルーティング先のメソッドに渡すことができます。
 
 qiitaの記事でも``https://qiita.com/<ユーザ名>``でアクセスすることでそのアカウントのページにアクセスすることができます。
@@ -406,7 +407,7 @@ int以外にも、以下が利用可能です。
 |float|intと同様、浮動小数点を受け入れる|
 |path|デフォルト同様だが、スラッシュも受け入れる|
 
-#メソッドで処理を分ける
+# メソッドで処理を分ける
 今度は`GET`と`POST`メソッドで処理を分けてみます。
 
 FlaskでHTTPリクエストメソッドを処理するためには、`request`というパッケージをインポートする必要があります。
@@ -505,7 +506,7 @@ GET Method
 
 とすればGET処理をすることができます。
 
-#エラーページを作成してみよう
+# エラーページを作成してみよう
 最後にエラーページのカスタマイズについてです。
 
 Flaskでは何らかエラーが発生した場合に指定したステータスコードとテンプレートページを返すことができます。
@@ -580,7 +581,7 @@ curlで実行してみると
 
 のように出力されることが確認できます。
 
-#おわりに
+# おわりに
 
 今回は、curlの説明や、httpリクエストメソッドなどの説明も簡単に触れつつ、python Flaskで簡単なREST APIを実装してみました。
 
@@ -591,11 +592,3 @@ GETやPUTだけの簡単なAPIであればサックと実装できるという�
 皆さんもWebサイトを作成する時にバックエンドを実装する際にはREST APIでの実装を一度試してみてください！
 
 以上となります。
-
-
-
-
-
-
-
-
