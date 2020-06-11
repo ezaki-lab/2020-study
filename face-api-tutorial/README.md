@@ -1,6 +1,8 @@
-#Face-API-Tutorial
+# Face-API-Tutorial
 
-#Azure portalでFace APIを使えるようにする。
+[qiita](https://qiita.com/YutoTakamatsu/private/017ad395076899abbc37)
+
+# Azure portalでFace APIを使えるようにする。
 AzureのFaceAPIを利用するためには、FaceAPIのリソースを作成します。
 [Azure Portal](https://azure.microsoft.com/ja-jp/features/azure-portal/)
 
@@ -29,11 +31,11 @@ AzureのFaceAPIを利用するためには、FaceAPIのリソースを作成し�
 
 この画面が出力されていればFace APIのリソースを作成できています。
 
-#Face APIの仕組み
+# Face APIの仕組み
 FaceAPIで人物の顔を登録して、それを学習させる過程としては、まず、人物の集合であるグループを定義する必要があります。
 
 
-#pythonでカメラを起動
+# pythonでカメラを起動
 
 今回は、pythonでカメラを起動して、カメラから顔を取得し、新規の顔はグループを定義して、学習して、次からはその人はリピーターですというふうに出力されるようにしてみたいと思います。
 
@@ -148,7 +150,7 @@ create_large_face()
 base_urlの部分を先ほどコピーしたエンドポイントに書き換えてください。
 最後に/face/v1.0を加えることに注意してください。
 
-#Large Face Listをtrainする！
+# Large Face Listをtrainする！
 
 先ほど作成したLarge Face Listをtrainします！
 そのためには、img/img.jpgが自分の顔になっている状態でtrain.pyを実行してください。
@@ -235,7 +237,7 @@ train_LargeFaceList()
 
 今回もサブスクリプションキーと、エンドポイントを変更してください。
 
-#顔を認識して年齢と性別を取り出してみよう！
+# 顔を認識して年齢と性別を取り出してみよう！
 顔認識をして年齢と性別を取り出してみましょう。
 さらに、一度認識された顔かどうかを認識することもできます。
 
