@@ -34,9 +34,30 @@
 ![android2](./examples/android2.jpg)
 ![android3](./examples/android3.jpg)
 
+### Xcodeの設定（macOSのみ）
+
+```
+$ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+$ sudo xcodebuild -runFirstLaunch
+```
+
+
 ## 実行
 
 ```
 $ cd 2020-study/flutter_tutorial
+$ flutter run
+```
+
+エミュレーターを複数立ち上げている場合は以下のコマンド
+
+```
+$ flutter run -d <deviceId>
+```
+
+### iOSシミュレーターで実行
+
+```
+$ open -a Simulator
 $ flutter run
 ```
